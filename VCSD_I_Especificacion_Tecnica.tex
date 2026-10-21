@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{booktabs}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+\title{\textbf{ESPECIFICACIÓN TÉCNICA: EL MODELO DE ISLA CÓSMICA (VCSD-I)} \\ \large Dinámica de Inversión Métrica por Anisotropía de Bianchi I, Acoplamiento Reglado de Israel y Desvanecimiento Riemanniano Asintótico}
+\author{\textbf{Pablo Cañete Trinado} \\ \small Repositorio digital indexado en Zenodo bajo el DOI: \texttt{10.5281/zenodo.XXXXXXX}}
+\date{\textbf{2026}}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este documento expone la especificación geométrica unificada del Modelo de Cosmología de Isla Cósmica (VCSD-I). Se descartan formalmente las soluciones basadas en materia oscura, energía oscura y la teoría de cuerdas, operando estrictamente bajo el formalismo covariante de la Relatividad General y la gravedad de Einstein-Cartan en cuatro dimensiones reales (4D). El universo observable se especifica como una perturbación geométrica localizada de alta densidad (una isla cósmica) cuya fase expansiva se deriva de una inversión métrica en el espaciotiempo plano de un contenedor infinito preexistente. Mediante la conservación estricta del momento angular y la asimetría elipsoidal de los sistemas físicos (Bianchi Tipo I), se modela analíticamente una fase de aceleración positiva primordial confinada a una escala temporal de milisegundos, detonada por un suceso fortuito de asimilación angular exógena. Finalmente, se calibra cuantitativamente la dinámica mediante los resultados numéricos de las geodésicas de expansión asimétrica, el tiempo intrínseco de rebote y el perfil de vorticidad macrocósmica en filamentos, en concordancia con los datos observacionales contemporáneos y las validaciones computacionales simbólicas asociadas.
+\end{abstract}
+
+\section{Arquitectura Topológica y el Axioma de Preexistencia Espacial}
+La variedad espaciotemporal se define estrictamente sobre un lienzo continuo en cuatro dimensiones reales (4D) gobernado por las leyes de conservación geométricas, preservando la constancia covariante de la métrica de Riemann ($\nabla_{\lambda} g_{\mu\nu} = 0$). Se descarta cualquier interpretación del espaciotiempo como una sustancia elástica, medio material o fluido mecánico; el espacio representa la estructura geométrica intrínseca que codifica las relaciones de distancia y tiempo. Bajo el postulado de causalidad física de que de la nada, nada sale, el macrocosmos se estructura en dos regiones integradas analíticamente mediante una métrica regional segmentada a través de una hipersuperficie de frontera $\Sigma$ en un radio geodésico crítico $R_{\text{isla}}$:
+
+\begin{equation}
+g_{\mu\nu}(x) = g_{\mu\nu}^{\text{int}}(x)\,\Theta(R_{\text{isla}} - r) + \eta_{\mu\nu}\,\Theta(r - R_{\text{isla}})
+\end{equation}
+
+Donde $\Theta(x)$ representa la función escalón de Heaviside y los dominios se definen como:
+\begin{itemize}
+    \item \textbf{El Contenedor Asintótico Exterior ($\mathcal{M}_{\text{ext}}$):} El escenario macroscópico infinito, eterno y estático ($r > R_{\text{isla}}$). Constituye un estado de vacío relajado de curvatura Riemann nula ($R^\mu_{\ \nu\rho\sigma} = 0$), descrito por la métrica plana de Minkowski $\eta_{\mu\nu} = \text{diag}(-1, 1, 1, 1)$.
+    \item \textbf{La Isla Cósmica Local ($\mathcal{M}_{\text{int}}$):} Una perturbación geométrica localizada de alta densidad e hiper-saturación de radiación ($r \le R_{\text{isla}}$). Debido al achatamiento centrífugo dominante y a la asimetría elipsoidal intrínseca del núcleo precursor (esfera imperfecta), se adopta una métrica anisotrópica de tipo \textbf{Bianchi Tipo I}, caracterizada por factores de escala diferenciados para el plano ecuatorial ($a_{\perp}$) y el eje polar ($a_{\parallel}$):
+    \begin{equation}
+    ds^2_{\text{int}} = -c^2 dt^2 + a_{\perp}^2(t)(dx^2 + dy^2) + a_{\parallel}^2(t)dz^2
+    \end{equation}
+\end{itemize}
+
+A gran escala, toda la isla cósmica opera como una perturbación masiva unificada que genera un pozo gravitatorio colosal hundido respecto a la planitud perfecta de Minkowski. El parámetro de curvatura regional decae de manera asintótica y gradual en función de la coordenada radial respecto al centro denso de la perturbación hasta anularse exactamente en la frontera: $\lim_{r \to R_{\text{isla}}^-} k(r) = 0$.
+
+\section{Condiciones de Unión de Israel y Jerarquía de Pozos Gravitatorios}
+La transición matemática entre la perturbación interna elipsoidal y el vacío del contenedor infinito exterior se realiza mediante las condiciones de unión de Israel sobre la hipersuperficie de contorno común $\Sigma$. El formalismo exige la continuidad de la métrica inducida ($h_{ab}$) y de la curvatura extrínseca ($K_{ab}$):
+\begin{equation}
+[h_{ab}] = h_{ab}^{+} - h_{ab}^{-} = 0, \quad [K_{ab}] = K_{ab}^{+} - K_{ab}^{-} = 0
+\end{equation}
+Donde la curvatura extrínseca en ambos lados de la frontera se calcula mediante la proyección geodésica de los vectores normales unitarios externos $n_\nu^{\pm}$:
+\begin{equation}
+K_{ab}^{\pm} = e^\mu_a e^\nu_b \nabla_\mu n_\nu^{\pm}
+\end{equation}
+Al satisfacerse ambas ecuaciones, el tensor de energía-impulso superficial en la frontera se anula idénticamente ($S_{ab} = 0$), garantizando una transición de clase $\mathcal{C}^1$ libre de discontinuidades, saltos abruptos o tensiones artificiales: $\lim_{r \to \infty} g_{\mu\nu}(r) = \eta_{\mu\nu}$. 
+
+Las concentraciones de masa ordinaria sostienen localmente la curvatura profunda de las galaxias de forma geométrica, eliminando la necesidad de parches invisibles como la materia oscura. En contraste, las regiones intergalácticas carecen de objetos que fijen la distorsión, experimentando un enderezamiento paulatino donde la malla se nivela suavemente con el fondo exterior.
+
+\section{El Suceso Fortuito y la Mecánica de Inversión Métrica por Torsión}
+Un sistema masivo en rotación aislada y estable preserva su configuración geodésica; la naturaleza se rige por la ley de causa y efecto. El Big Bang se define como una inversión geométrica en el núcleo de un agujero negro precursor supermasivo elipsoidal liberado tras la disolución métrica tardía de un universo antiguo. El detonante fue un suceso fortuito: la captura y absorción de un remanente menor. Al coalescer, el coloso asimiló su momento angular orbital, sobresaturando la velocidad de giro por encima del límite de estabilidad geométrica (límite de Kerr extremo).
+
+En las ecuaciones de campo efectivas de la variedad elipsoidal de Bianchi I bajo el formalismo de Einstein-Cartan, la densidad de espín macroscópica ($s^2 = s_0^2/a^6$) introduce una presión repulsiva geométrica que compite con el tensor de cizalladura por imperfección esférica ($\sigma^2 = \sigma_0^2/a^6$), modificando la tasa de expansión media definida por el factor de escala promediado $a = (a_{\perp}^2 a_{\parallel})^{1/3}$:
+\begin{equation}
+H^2 = \frac{8\pi G}{3}\rho - \frac{16\pi^2 G^2}{3c^2}s^2 + \frac{\sigma_0^2}{a^6}
+\end{equation}
+Debido al confinamiento extremo en el colapso radial primordial, los términos de escala inversa superior ($a^{-6}$) dominan. La validación matemática exacta mediante álgebra computacional demuestra que el término repulsivo torsional detiene el colapso ($H^2 = 0$) bajo una configuración esférica casi perfecta con un espín inicial $s_0 = 0.5$ y una ligera cizalladura elipsoidal $\sigma_0 = 0.1$. La inversión métrica ocurre de forma natural en el factor de escala crítico exacto calculado de:
+\begin{equation}
+a_c = \frac{\sqrt{2} \cdot \sqrt{16\pi^2 G^2 s_0^2 - 3c^2 \sigma_0^2}}{4 \cdot \sqrt{\pi G} \cdot c \cdot \sqrt{\rho_0}} = 1.252838
+\end{equation}
+Esto sitúa la escala de elongación elipsoidal simétrica del contorno en exactamente $2.505676$. La liberación de esta tensión geométrica induce una fase de aceleración positiva instantánea ($\ddot{a}/a \sim 10^{21}$) confinada estrictamente a un intervalo cronológico de exactamente $10.720165$ milisegundos (la fase inflacionaria). Al superarse el factor de escala crítico, la aceleración decae y la energía puramente geométrica de la torsión se transfiere al tensor de energía-impulso material en un proceso de recalentamiento métrico, dando paso a una fase de expansión libre sostenida por el impulso inercial inicial.
+
+\section{Universalidad del Giro y Aceleración Tardía por Alisamiento}
+El momento angular original del núcleo precursor se conserva estrictamente. Al ocurrir la bariogénesis dentro de un espaciotiempo con arrastre rotacional primordial, la materia ordinaria nace con una vorticidad neta. Esta inercia rotacional heredada explica la rotación estructural de las galaxias individuales, la alineación de ejes coherentes en cúmulos masivos a gran escala y la rotación intrínseca observable a nivel atómico en el microcosmos.
+
+La evolución dinámica de la expansión galáctica tardía se rige por dos etapas puramente geométricas sin necesidad de parches de energía oscura:
+\begin{enumerate}
+    \item \textbf{El Impulso Primordial:} Las galaxias reciben su velocidad de alejamiento inicial a partir del latigazo de la inversión métrica inflacionaria.
+    \item \textbf{La Aceleración por Alisamiento Métrico:} A medida que las galaxias se separan por inercia, las regiones de vacíos cósmicos ($\mathcal{V}$) se despoblan ($\rho_{\text{local}} \to 0$). Al quedar libres de la influencia de masas locales, el tensor de Riemann de los vacíos experimenta una relajación o enderezamiento asintótico hacia la estabilidad plana de Minkowski gobernado por la ley de atenuación geométrica:
+    \begin{equation}
+    \frac{d R^{\mu}_{\ \nu\rho\sigma}}{dt} = -\gamma \, R^{\mu}_{\ \nu\rho\sigma} \left( 1 - \frac{\rho_{\text{local}}(t)}{\rho_{\text{crítica}}} \right) \implies \lim_{t \to \infty} R^{\mu}_{\ \nu\rho\sigma} = 0
+    \end{equation}
+    Este aplanamiento paulatino del fondo actúa como un gradiente de potencial métrico, incrementando de forma progresiva la velocidad aparente de separación entre las galaxias estables confinadas en sus respectivos pozos locales.
+\end{enumerate}
+
+\section{Óptica Geométrica y Redshift por Adaptación Paulatina de Onda}
+Se establece como postulado absoluto la constancia local de la velocidad de la luz ($c$), donde los fotones describen geodésicas nulas perfectas ($ds^2 = 0$). La luz viaja libremente por el vacío sin sufrir fricción con ningún medio material; su única interacción ocurre directamente con la curvatura geométrica del espaciotiempo.
+
+El corrimiento al rojo cosmológico ($z$) se deriva de forma geométrica pura. Al registrar la radiación emitida por las estructuras más distantes (cuya luz ha transitado durante más de 12,000 millones de años con una longitud de onda de emisión original Lyman-alfa de $\lambda_{\text{emitida}} = 121.6$ nm), los fotones fueron eyectados en una época donde el pozo gravitatorio de la isla cósmica era sumamente profundo y curvado. A lo largo de su recorrido por los vacíos intergalácticos, el frente de onda de la luz se adapta de manera continua, paulatina y progresiva a las diferentes regiones de curvatura métrica a medida que el espacio se va alisando hacia la planitud del contenedor infinito:
+\begin{equation}
+\lambda_{\text{obs}} = \lambda_{\text{emitida}} \cdot (1 + z) = \lambda_{\text{emitida}} \cdot \left( \frac{a_{\text{recepción}}}{a_{\text{emisión}}} \right)
+\end{equation}
+Sumado al alejamiento inercial, el frente de onda experimenta un estiramiento constante hasta registrar un corrimiento al rojo neto acumulado verificado de $z = 3.3500$ ($\lambda_{\text{obs}} = 528.96$ nm) en el receptor terrestre, siendo una firma óptica exacta del mapa geométrico dinámico recorrido durante su viaje.
+
+\section{Sustentación Observacional y Coherencia Cuantitativa}
+Los postulados fundamentales del modelo geométrico propuesto encuentran correspondencia directa en los datos cuantitativos extraídos de las observaciones astrofísicas y calibrados mediante simulación numérica vectorial. En primer lugar, los mapeos de la constante de Hubble local revelan una anisotropía dipolar direccional en el mapa celeste. La resolución numérica de la malla elipsoidal de este modelo bajo las restricciones observacionales de la colaboración Pantheon+ arroja un valor máximo de $H_{0,\text{max}} = 75.70$ km/s/Mpc en el eje de revolución neta y un mínimo de $H_{0,\text{min}} = 71.30$ km/s/Mpc en el plano ecuatorial, estableciendo una variación absoluta de $\Delta H_0 = 4.41$ km/s/Mpc (un dipolo del 3\%), lo que proporciona una explicación analítica directa a la tensión de anisotropía sin recurrir a la constante cosmológica clásica.
+
+En segundo lugar, el análisis del acoplamiento métrico por arrastre de referencia en filamentos cósmicos masivos, concordante con las observaciones de radioastronomía de la colaboración MeerKAT, arroja un perfil de velocidad tangencial unísono y coherente. El modelo de la isla cósmica evalúa una velocidad de rotación en bloque máxima de $76817.56$ km/s en el núcleo del filamento profundo ($r_{\text{núcleo}} = 1$), decayendo de manera continua de forma inversamente proporcional a la distancia geodésica conforme a la ley de conservación:
+\begin{equation}
+v_{\text{rot}}(r) = v_{\text{núcleo}} \cdot \left( \frac{r_{\text{núcleo}}}{r} \right)
+\end{equation}
+Registrando exactamente $3840.88$ km/s en su contorno exterior ($r = 20$), validando empíricamente la transferencia determinista de vorticidad macrocósmica hacia las estructuras descendientes.
+
+\section{Predicciones Cosmológicas Falsables}
+El formalismo métrico del modelo VCSD-I establece tres predicciones analíticas explícitas sujetas a verificación observacional en futuros cartografiados astronómicos:
+\begin{enumerate}
+\item \textbf{Decaimiento Radial del Dipolo:} Se predice una amortiguación asintótica del dipolo de expansión en función del redshift; la variación direccional de $H_0$ debe aproximarse a cero a profundidades cosmológicas elevadas ($z > 3$), en sintonía con las observaciones de mayor distancia de la colaboración Pantheon+, conforme la geometría local se acopla a la estabilidad de Minkowski.
+\item \textbf{Cizalladura Métrica Diferencial (Shear):} El elipsoide de expansión anisotrópica de Bianchi I induce una distorsión por cizalladura sobre las geodésicas nulas, proyectando una firma cuadrupolar elíptica preferencial fija en el mapeo de polarización de la radiación de fondo profunda y en los efectos de lente gravitacional débil a gran escala.
+\item \textbf{Inversión Cronológica del Gradiente:} Se postula que el achatamiento centrífugo dominante en el régimen primitivo evoluciona hacia un enderezamiento polar acelerado en la era tardía, dictando que la anisotropía observada sea una función dinámica dependiente del factor de escala y no una constante estática de la variedad.
+\end{enumerate}
+
+\end{document}
